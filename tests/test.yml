@@ -1,0 +1,5 @@
+---
+- hosts: my-vpn
+  remote_user: root
+  roles:
+    - aliasmee.openldap

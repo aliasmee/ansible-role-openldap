@@ -1,0 +1,17 @@
+---
+
+- name: Install openldap service package
+  yum:
+    name: "{{ packages }}"
+    state: latest
+  vars:
+    packages:
+    - openldap
+    - openldap-servers
+    - openldap-clients
+
+- name: Start slapd
+  service:
+    name: slapd
+    state: started
+    enabled: yes
